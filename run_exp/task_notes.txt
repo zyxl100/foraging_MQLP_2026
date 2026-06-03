@@ -1,0 +1,16 @@
+This is the 4th version of the space mining task with 3 types of planets.
+5 blocks, 6 minutes long each
+
+Galaxy 1: N(mu=0.3,sd=0.07)
+Galaxy 2: N(mu=0.6,sd=0.07)
+Galaxy 3: N(mu=0.9,sd=0.07)
+Initial_reward: N(mu=100,sd=10)
+
+dig_time = 2 sec (decision_time = 2 sec)
+travel_time = 10 sec
+display_reward = 1.5 sec
+land_time = 0.5 sec
+alien_welcome = 5 sec
+
+This uses keyboard (A for dig and L for travel) to make choices.
+No pause 
