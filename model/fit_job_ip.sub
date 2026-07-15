@@ -1,0 +1,14 @@
+#!/bin/bash
+#SBATCH --job-name=foraging_CV_sub_%A     ## Name of the job.
+#SBATCH -A bornstea_lab  ## account to charge
+#SBATCH -p standard         ## partition/queue name
+#SBATCH --time=99:00:00    ## run time in days-hh:mm:ss
+#SBATCH --nodes=1            ## (-N) number of nodes to use
+#SBATCH --ntasks=1           ## (-n) number of tasks to launch
+#SBATCH --cpus-per-task=1    ## number of cores the job needs
+#SBATCH --array=0,1,2,3,4,5,6,7,8,9,11,12,13,14,15,16,17,18,19,20,21,22,25,26,27,28,29,30,31,32,33,34,35,37,38,39,40,41,42,45,46,47,48,49,50,51,52,53,54,56,57,58,60,61,62,63,64,65,66,67,68,69,70,71,72,74
+#SBATCH --error=foraging_slurm_ip-%x.%A_%a.err ## error log file
+#SBATCH --output=job_outfiles/foraging_%x.%A_%a.out
+
+# Run command hostname and save output to the file out.txt
+srun /pub/yifec19/soft_ware/julia-1.8.5/bin/julia fit_by_planet.jl $SLURM_ARRAY_TASK_ID 0 

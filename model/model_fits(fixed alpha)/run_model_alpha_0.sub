@@ -1,0 +1,35 @@
+#!/bin/bash
+#SBATCH --job-name=foraging_free_alpha_sub_%A     ## Name of the job.
+#SBATCH -A bornstea_lab  ## account to charge
+#SBATCH -p standard         ## partition/queue name
+#SBATCH --time=24:00:00    ## run time in days-hh:mm:ss
+#SBATCH --nodes=1            ## (-N) number of nodes to use
+#SBATCH --ntasks=1           ## (-n) number of tasks to launch
+#SBATCH --cpus-per-task=1    ## number of cores the job needs
+#SBATCH --mem-per-cpu=32G
+#SBATCH --array=1,2,3,5,7,10,11,12,13,14,16,18,20,21,23,27,28,29,32,33,35,36,37,38,39,40,41,42,44,45,46,47,48,50,51,53,54,56,57,58,60,61,62,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,81,82,83,85,86,87,89,91,92,93,94,95,96,97,98,99,100,101,102,104,105,108,110,111,112,113,114,117,118,119,120,121,122,123,125,127,129,130,131,136,137,138,139,141,142,143,144,145,146,147,148,149,150,151,152,155,156,158,161,163,164,167,170,171,172,173,174,176,177,178,180,181,182,184,185,186,187,188,189,190,191,192,193,194,195,197,198,200,201,202,203
+
+#SBATCH --error=job_errorfiles/foraging_sub%a_%A.err ## error log file
+#SBATCH --output=job_outfiles/foraging_sub%a_%A.out
+#SBATCH --mail-type=end
+#SBATCH --mail-user=rogerc8@uci.edu
+
+alpha_val=0
+output_folder="foraging_MQLP_results"
+
+module load julia
+cd /dfs6/pub/rogerc8/foraging_modeling/Harhen-Budiono-Hartley-Bornstein-2025-Foraging/modeling/model_fits
+
+echo "Starting $SLURM_ARRAY_TASK_ID"
+echo "============================="
+
+srun julia run_crp_alpha_free.jl $alpha_val $SLURM_ARRAY_TASK_ID
+echo "CRP Finished"
+srun julia run_softmax_alpha_free.jl $alpha_val $SLURM_ARRAY_TASK_ID $output_folder
+echo "output folder $output_folder"
+
+echo "Softmax Finished"
+echo "Done: $(date)"
+
+
+exit

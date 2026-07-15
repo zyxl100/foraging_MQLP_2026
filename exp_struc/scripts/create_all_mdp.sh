@@ -1,0 +1,6 @@
+
+for seed in 186897281 230140307 188113141 77750966 235617739 247784847 90146503 32423120 136575146 33010208
+  do
+    python3 generate_mdp.py $seed
+    python3 make_blocks.py $seed
+done
