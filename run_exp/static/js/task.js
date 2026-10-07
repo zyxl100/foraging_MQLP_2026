@@ -618,6 +618,19 @@ var alien_welcome_prac = {
  /* INSTRUCTIONS   */
 
  // Welcome
+
+  var id_intro = {
+    type: 'survey-html-form',
+    html: "<label for='worker_id'>Enter your Prolific Worker ID. Please make sure this is correct! </label><br><input type='text' id='worker_id' name='worker_id' required><br><br>",
+    on_finish: function (data) {
+      // Data Structure //
+      window.useridtouse=data.responses
+      window.useridtouse = useridtouse.split('"')[3];
+      subject_id=useridtouse
+      data.subject_id = useridtouse
+    }
+  }
+
  var welcome = {
    type: 'html-keyboard-response',
    stimulus: "<p>Howdy! In this experiment, you’ll be an explorer traveling through space to collect space treasure.</p><p>Your mission is to collect as much treasure as possible.</p><p>Press the <strong>space bar</strong> to begin reading the instructions!</p><br><br><p><img src='../static/images/task_images/opening_img-01.jpg' height='600' width='auto'></p>",
@@ -962,7 +975,7 @@ var debrief = {
 
 
 // Welcome to the experiment
-timeline.push(welcome); // add variable welcome to end of timeline array
+timeline.push(id_intro,welcome); // add variable welcome to end of timeline array
 
 // introduce goal of the game
 timeline.push(instructions_goal); // add variable welcome to end of timeline array
