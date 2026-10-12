@@ -421,7 +421,7 @@ var harvest_instruc = {
          // if this is the last block
        if (b_num == total_num_blocks) { // end of block or end of exp
             // jsPsych.addNodeToEndOfTimeline({timeline: [catch_trial,end_of_experiment,debrief,demographics,quic_intro,quic_prior_12,quic_prior_18],}, jsPsych.resumeExperiment);
-             jsPsych.addNodeToEndOfTimeline({timeline: [catch_trial,end_of_experiment,debrief,demographics,quic_intro,quic_prior_12,quic_prior_18,lec_intro,lec_survey,pcl_intro,pcl_survey],}, jsPsych.resumeExperiment);
+             jsPsych.addNodeToEndOfTimeline({timeline: [catch_trial,end_of_experiment,debrief,demographics,quic_intro,quic_prior_12,quic_prior_18,lec_intro,lec_survey,pcl_intro,pcl_survey,completion_code],}, jsPsych.resumeExperiment);
          // this is the first block
          } else if (b_num == 1) {
              jsPsych.addNodeToEndOfTimeline({timeline: [catch_trial, end_of_block],}, jsPsych.resumeExperiment);
@@ -786,6 +786,15 @@ var demographics = {
   html:"<p>How old are you in years? Enter '-1' if you would prefer not to respond.</p><input id='age' name='age' type='number' min='-1' style='height:45px; width:80px'/><div class='question'> <p class='questiontext'><br>What gender do you identify with?</p><select id='gender' name='gender'><option value='noresp' SELECTED></option><option value='female'>Female</option><option value='male'>Male</option><option value='other'>Other</option><option value='noresponse'>I'd prefer not to respond</option><select></div>",
   on_finish: function(data){
     data.trial_type = "demo"
+  }
+};
+
+var completion_code = {
+	type: 'html-keyboard-response',
+	stimulus:'<p> Your completion code is <strong>CVV00ER7</strong></p> <p> Make sure to copy the completion code (CTRL+C) to submit on Prolific! Press <strong>q</strong>  quit. </p><br><br>',
+  choices: ['q'],
+  on_finish: function(data) {
+    data.trial_type = "bonus";
   }
 };
 
