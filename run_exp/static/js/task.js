@@ -770,7 +770,7 @@ var end_of_experiment = {
     var begin_bonus = "<p> You made $15 plus $";
     var bonus_str = bonus.toString();
     var end_bonus = " in bonus payment!</p>";
-    var end_para = "<p> You'll just answer some questions, and then, you will be finished! </p><p>Press the <strong>space bar</strong> to continue. </p><br><br><p><img src='../static/images/task_images/opening_img-01.jpg' height='600' width='auto'></p>"
+    var end_para = "<p> You'll just answer some questions for additional compensation, and then, you will be finished! </p><p>Press the <strong>space bar</strong> to continue. </p><br><br><p><img src='../static/images/task_images/opening_img-01.jpg' height='600' width='auto'></p>"
     end_of_experiment.stimulus = begin_para.concat(begin_bonus,bonus_str,end_bonus,end_para)
     window.bonus = bonus;
   },
