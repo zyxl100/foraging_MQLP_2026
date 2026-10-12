@@ -960,6 +960,7 @@ var pcl_survey = {
   }),
   on_finish: function(data){
     data.trial_type = "pcl_survey";
+    save_data(false)
   }
 };
 // PCL-5 end
