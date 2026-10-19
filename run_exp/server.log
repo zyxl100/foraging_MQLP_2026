@@ -67,3 +67,2119 @@
 2026-10-14 14:49:07,821 Scheduler started
 2026-10-14 14:49:07,910 Scheduler started
 2026-10-14 14:49:07,913 Scheduler started
+2026-10-19 08:54:01,644 Scheduler started
+2026-10-19 08:54:01,888 Scheduler started
+2026-10-19 08:54:02,005 Scheduler started
+2026-10-19 08:54:02,080 Scheduler started
+2026-10-19 08:54:02,091 Scheduler started
+2026-10-19 09:09:27,655 browser_type_not_allowed (1014) {'assignmentId': 'debugeaVjz', 'hitId': 'debugbHCh0', 'workerId': 'debughxuhe', 'mode': 'debug'}
+[2026-10-19 09:16:36 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563620)
+[2026-10-19 09:16:50 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563621)
+[2026-10-19 09:16:50 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563622)
+[2026-10-19 09:16:50 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563623)
+[2026-10-19 09:16:51 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563619)
+2026-10-19 09:16:54,481 Scheduler started
+2026-10-19 09:16:54,669 Scheduler started
+2026-10-19 09:16:54,706 Scheduler started
+2026-10-19 09:16:56,194 Scheduler started
+2026-10-19 09:16:57,508 Scheduler started
+2026-10-19 09:17:24,079 Exception on /ad [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.8/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/user_utils.py", line 23, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/experiment.py", line 340, in advertisement
+    nrecords = Participant.query.\
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3776, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3496, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3463, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3432, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3508, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3533, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT foraging.uniqueid AS foraging_uniqueid, foraging.assignmentid AS foraging_assignmentid, foraging.workerid AS foraging_workerid, foraging.hitid AS foraging_hitid, foraging.ipaddress AS foraging_ipaddress, foraging.browser AS foraging_browser, foraging.platform AS foraging_platform, foraging.language AS foraging_language, foraging.cond AS foraging_cond, foraging.counterbalance AS foraging_counterbalance, foraging.codeversion AS foraging_codeversion, foraging.beginhit AS foraging_beginhit, foraging.beginexp AS foraging_beginexp, foraging.endhit AS foraging_endhit, foraging.bonus AS foraging_bonus, foraging.status AS foraging_status, foraging.mode AS foraging_mode 
+FROM foraging 
+WHERE foraging.assignmentid != ? AND foraging.workerid = ?) AS anon_1]
+[parameters: ('debugP5Ul1', 'debugfBcKb')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2026-10-19 09:17:27,347 Exception on /ad [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.8/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/user_utils.py", line 23, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/experiment.py", line 340, in advertisement
+    nrecords = Participant.query.\
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3776, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3496, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3463, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3432, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3508, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3533, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT foraging.uniqueid AS foraging_uniqueid, foraging.assignmentid AS foraging_assignmentid, foraging.workerid AS foraging_workerid, foraging.hitid AS foraging_hitid, foraging.ipaddress AS foraging_ipaddress, foraging.browser AS foraging_browser, foraging.platform AS foraging_platform, foraging.language AS foraging_language, foraging.cond AS foraging_cond, foraging.counterbalance AS foraging_counterbalance, foraging.codeversion AS foraging_codeversion, foraging.beginhit AS foraging_beginhit, foraging.beginexp AS foraging_beginexp, foraging.endhit AS foraging_endhit, foraging.bonus AS foraging_bonus, foraging.status AS foraging_status, foraging.mode AS foraging_mode 
+FROM foraging 
+WHERE foraging.assignmentid != ? AND foraging.workerid = ?) AS anon_1]
+[parameters: ('debugdhe9h', 'debugwhAvI')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2026-10-19 09:17:46 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563699)
+2026-10-19 09:17:57,269 Scheduler started
+2026-10-19 09:18:58,129 Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.8/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/user_utils.py", line 23, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/experiment.py", line 453, in start_exp
+    matches = Participant.query.\
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3346, in all
+    return list(self)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3508, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3533, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: SELECT foraging.uniqueid AS foraging_uniqueid, foraging.assignmentid AS foraging_assignmentid, foraging.workerid AS foraging_workerid, foraging.hitid AS foraging_hitid, foraging.ipaddress AS foraging_ipaddress, foraging.browser AS foraging_browser, foraging.platform AS foraging_platform, foraging.language AS foraging_language, foraging.cond AS foraging_cond, foraging.counterbalance AS foraging_counterbalance, foraging.codeversion AS foraging_codeversion, foraging.beginhit AS foraging_beginhit, foraging.beginexp AS foraging_beginexp, foraging.endhit AS foraging_endhit, foraging.bonus AS foraging_bonus, foraging.status AS foraging_status, foraging.mode AS foraging_mode 
+FROM foraging 
+WHERE foraging.workerid = ?]
+[parameters: ('debugJIl4h',)]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+2026-10-19 09:19:03,137 Exception on /exp [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.8/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/user_utils.py", line 23, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/experiment.py", line 453, in start_exp
+    matches = Participant.query.\
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3346, in all
+    return list(self)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3508, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3533, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: SELECT foraging.uniqueid AS foraging_uniqueid, foraging.assignmentid AS foraging_assignmentid, foraging.workerid AS foraging_workerid, foraging.hitid AS foraging_hitid, foraging.ipaddress AS foraging_ipaddress, foraging.browser AS foraging_browser, foraging.platform AS foraging_platform, foraging.language AS foraging_language, foraging.cond AS foraging_cond, foraging.counterbalance AS foraging_counterbalance, foraging.codeversion AS foraging_codeversion, foraging.beginhit AS foraging_beginhit, foraging.beginexp AS foraging_beginexp, foraging.endhit AS foraging_endhit, foraging.bonus AS foraging_bonus, foraging.status AS foraging_status, foraging.mode AS foraging_mode 
+FROM foraging 
+WHERE foraging.workerid = ?]
+[parameters: ('debugJIl4h',)]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2026-10-19 09:19:14 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563695)
+[2026-10-19 09:19:52 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563696)
+[2026-10-19 09:19:52 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563697)
+[2026-10-19 09:19:52 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563704)
+2026-10-19 09:19:54,201 Scheduler started
+2026-10-19 09:19:54,201 Scheduler started
+2026-10-19 09:19:54,221 Scheduler started
+2026-10-19 09:19:55,434 Scheduler started
+[2026-10-19 09:20:59 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563705)
+[2026-10-19 09:21:19 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563706)
+[2026-10-19 09:21:19 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563707)
+[2026-10-19 09:21:19 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563708)
+[2026-10-19 09:21:19 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563698)
+2026-10-19 09:21:21,151 Scheduler started
+2026-10-19 09:21:21,288 Scheduler started
+2026-10-19 09:21:21,424 Scheduler started
+2026-10-19 09:21:21,743 Scheduler started
+2026-10-19 09:21:21,766 Scheduler started
+2026-10-19 09:22:19,265 Exception on /ad [GET]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: database is locked
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.8/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.8/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/user_utils.py", line 23, in new_func
+    resp = make_response(func(*args, **kwargs))
+  File "/usr/local/lib/python3.8/dist-packages/psiturk/experiment.py", line 340, in advertisement
+    nrecords = Participant.query.\
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3776, in count
+    return self.from_self(col).scalar()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3496, in scalar
+    ret = self.one()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3463, in one
+    ret = self.one_or_none()
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3432, in one_or_none
+    ret = list(self)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3508, in __iter__
+    return self._execute_and_instances(context)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/orm/query.py", line 3533, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1011, in execute
+    return meth(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
+    self._handle_dbapi_exception(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
+    util.raise_(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/util/compat.py", line 182, in raise_
+    raise exception
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
+    self.dialect.do_execute(
+  File "/usr/local/lib/python3.8/dist-packages/sqlalchemy/engine/default.py", line 593, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) database is locked
+[SQL: SELECT count(*) AS count_1 
+FROM (SELECT foraging.uniqueid AS foraging_uniqueid, foraging.assignmentid AS foraging_assignmentid, foraging.workerid AS foraging_workerid, foraging.hitid AS foraging_hitid, foraging.ipaddress AS foraging_ipaddress, foraging.browser AS foraging_browser, foraging.platform AS foraging_platform, foraging.language AS foraging_language, foraging.cond AS foraging_cond, foraging.counterbalance AS foraging_counterbalance, foraging.codeversion AS foraging_codeversion, foraging.beginhit AS foraging_beginhit, foraging.beginexp AS foraging_beginexp, foraging.endhit AS foraging_endhit, foraging.bonus AS foraging_bonus, foraging.status AS foraging_status, foraging.mode AS foraging_mode 
+FROM foraging 
+WHERE foraging.assignmentid != ? AND foraging.workerid = ?) AS anon_1]
+[parameters: ('debug2hcJS', 'debug0lBd8')]
+(Background on this error at: http://sqlalche.me/e/13/e3q8)
+[2026-10-19 09:23:36 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563709)
+[2026-10-19 09:23:36 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563710)
+[2026-10-19 09:23:36 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563711)
+[2026-10-19 09:23:36 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563712)
+[2026-10-19 09:23:37 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563713)
+2026-10-19 09:24:09,007 Scheduler started
+2026-10-19 09:24:09,111 Scheduler started
+2026-10-19 09:24:09,173 Scheduler started
+2026-10-19 09:24:09,335 Scheduler started
+2026-10-19 09:24:09,379 Scheduler started
+[2026-10-19 09:24:09 -0700] [1563718] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2026-10-19 09:24:44 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563718)
+[2026-10-19 09:25:23 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563719)
+[2026-10-19 09:25:23 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563720)
+[2026-10-19 09:25:23 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563721)
+[2026-10-19 09:25:23 -0700] [1563721] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2026-10-19 09:25:23 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2026-10-19 09:25:23 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563717)
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+[2026-10-19 09:25:24 -0700] [1563717] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 38, in handle
+    listener_name = listener.getsockname()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 541, in getsockname
+    return self._sock.getsockname()
+OSError: [Errno 9] Bad file descriptor
+2026-10-19 09:25:30,296 Scheduler started
+2026-10-19 09:25:30,297 Scheduler started
+2026-10-19 09:25:30,511 Scheduler started
+2026-10-19 09:25:30,581 Scheduler started
+2026-10-19 09:25:32,363 Scheduler started
+[2026-10-19 09:26:04 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563722)
+[2026-10-19 09:26:15 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563723)
+[2026-10-19 09:26:15 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563724)
+[2026-10-19 09:26:15 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563725)
+[2026-10-19 09:26:15 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563726)
+[2026-10-19 09:26:15 -0700] [1563726] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+2026-10-19 09:26:16,425 Scheduler started
+2026-10-19 09:26:16,512 Scheduler started
+2026-10-19 09:26:16,601 Scheduler started
+2026-10-19 09:26:16,605 Scheduler started
+2026-10-19 09:26:18,117 Scheduler started
+[2026-10-19 09:27:05 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563729)
+[2026-10-19 09:27:06 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563728)
+[2026-10-19 09:27:06 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563730)
+[2026-10-19 09:27:06 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563731)
+[2026-10-19 09:27:06 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563732)
+2026-10-19 09:27:53,077 Scheduler started
+2026-10-19 09:27:53,277 Scheduler started
+[2026-10-19 09:27:53 -0700] [1563737] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+2026-10-19 09:27:53,534 Scheduler started
+2026-10-19 09:27:53,567 Scheduler started
+2026-10-19 09:27:53,577 Scheduler started
+[2026-10-19 09:27:53 -0700] [1563739] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2026-10-19 09:27:53 -0700] [1563737] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2026-10-19 09:27:54 -0700] [1563740] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2026-10-19 09:27:54 -0700] [1563737] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 48, in handle
+    req = next(parser)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.req_count)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 186, in __init__
+    super().__init__(cfg, unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 53, in __init__
+    unused = self.parse(self.unreader)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 235, in parse
+    self.headers = self.parse_headers(data[:idx])
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/message.py", line 73, in parse_headers
+    remote_addr = self.unreader.sock.getpeername()
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 544, in getpeername
+    return self._sock.getpeername()
+OSError: [Errno 107] Transport endpoint is not connected
+[2026-10-19 09:44:04 -0700] [1563740] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 725, in send
+    return self._sock.send(data, flags)
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 55, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/ggevent.py", line 143, in handle_request
+    super().handle_request(listener_name, req, sock, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 128, in handle_request
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 114, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/wsgi.py", line 346, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 286, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 702, in sendall
+    return _sendall(self, data_memory, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 391, in _sendall
+    timeleft = __send_chunk(socket, chunk, flags, timeleft, end)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 320, in __send_chunk
+    data_sent += socket.send(chunk, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 732, in send
+    return self._sock.send(data, flags)
+TimeoutError: [Errno 110] Connection timed out
+[2026-10-19 09:45:28 -0700] [1563738] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 725, in send
+    return self._sock.send(data, flags)
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 55, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/ggevent.py", line 143, in handle_request
+    super().handle_request(listener_name, req, sock, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 128, in handle_request
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 114, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/wsgi.py", line 346, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 286, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 702, in sendall
+    return _sendall(self, data_memory, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 391, in _sendall
+    timeleft = __send_chunk(socket, chunk, flags, timeleft, end)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 320, in __send_chunk
+    data_sent += socket.send(chunk, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 732, in send
+    return self._sock.send(data, flags)
+TimeoutError: [Errno 110] Connection timed out
+[2026-10-19 09:46:13 -0700] [1563737] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 725, in send
+    return self._sock.send(data, flags)
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 55, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/ggevent.py", line 143, in handle_request
+    super().handle_request(listener_name, req, sock, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 128, in handle_request
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 114, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/wsgi.py", line 346, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 286, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 702, in sendall
+    return _sendall(self, data_memory, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 391, in _sendall
+    timeleft = __send_chunk(socket, chunk, flags, timeleft, end)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 320, in __send_chunk
+    data_sent += socket.send(chunk, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 732, in send
+    return self._sock.send(data, flags)
+TimeoutError: [Errno 110] Connection timed out
+[2026-10-19 09:54:36 -0700] [1563740] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 725, in send
+    return self._sock.send(data, flags)
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 55, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/ggevent.py", line 143, in handle_request
+    super().handle_request(listener_name, req, sock, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 128, in handle_request
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 114, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/wsgi.py", line 346, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 286, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 702, in sendall
+    return _sendall(self, data_memory, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 391, in _sendall
+    timeleft = __send_chunk(socket, chunk, flags, timeleft, end)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 320, in __send_chunk
+    data_sent += socket.send(chunk, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 732, in send
+    return self._sock.send(data, flags)
+TimeoutError: [Errno 110] Connection timed out
+[2026-10-19 09:57:59 -0700] [1563740] [ERROR] Socket error processing request.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 725, in send
+    return self._sock.send(data, flags)
+BlockingIOError: [Errno 11] Resource temporarily unavailable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 65, in handle
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 55, in handle
+    self.handle_request(listener_name, req, client, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/ggevent.py", line 143, in handle_request
+    super().handle_request(listener_name, req, sock, addr)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 128, in handle_request
+    util.reraise(*sys.exc_info())
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 625, in reraise
+    raise value
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/workers/base_async.py", line 114, in handle_request
+    resp.write(item)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/http/wsgi.py", line 346, in write
+    util.write(self.sock, arg, self.chunked)
+  File "/usr/local/lib/python3.8/dist-packages/gunicorn/util.py", line 286, in write
+    sock.sendall(data)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 702, in sendall
+    return _sendall(self, data_memory, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 391, in _sendall
+    timeleft = __send_chunk(socket, chunk, flags, timeleft, end)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 320, in __send_chunk
+    data_sent += socket.send(chunk, flags)
+  File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 732, in send
+    return self._sock.send(data, flags)
+TimeoutError: [Errno 110] Connection timed out
