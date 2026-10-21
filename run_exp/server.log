@@ -2183,3 +2183,21 @@ Traceback (most recent call last):
   File "/usr/local/lib/python3.8/dist-packages/gevent/_socketcommon.py", line 732, in send
     return self._sock.send(data, flags)
 TimeoutError: [Errno 110] Connection timed out
+[2026-10-19 21:56:37 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563736)
+[2026-10-19 21:56:37 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563738)
+[2026-10-19 21:56:37 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563739)
+[2026-10-19 21:56:37 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563740)
+[2026-10-19 21:56:38 -0700] [1563617] [CRITICAL] WORKER TIMEOUT (pid:1563737)
+2026-10-19 21:56:51,234 Scheduler started
+2026-10-19 21:56:51,403 Scheduler started
+2026-10-19 21:56:51,455 Scheduler started
+2026-10-19 21:56:51,458 Scheduler started
+2026-10-19 21:56:51,541 Scheduler started
+2026-10-20 16:10:44,946 Scheduler started
+2026-10-20 16:10:44,967 Scheduler started
+2026-10-20 16:10:44,993 Scheduler started
+2026-10-20 16:10:45,053 Scheduler started
+2026-10-20 16:10:45,112 Scheduler started
+2026-10-21 00:39:11,001 hit_assign_worker_id_not_set_in_exp (1003) {}
+2026-10-21 01:06:15,828 hit_assign_worker_id_not_set_in_mturk (1001) {}
+2026-10-21 02:22:41,154 hit_assign_worker_id_not_set_in_consent (1002) {}
