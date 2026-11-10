@@ -7,7 +7,7 @@ us_only = true
 approve_requirement = 99
 number_hits_approved = 200
 require_master_workers = false
-contact_email_on_error = yifec19@uci.edu
+contact_email_on_error = rapalsul@uci.edu
 ad_group = Default psiTurk Foraging
 psiturk_keywords = foraging, decision-making, learning, uncertainty
 organization_name = University of California, Irvine
@@ -19,8 +19,8 @@ database_url = sqlite:///participants.db
 table_name = foraging
 
 [Server Parameters]
-host = gorgonzola.cogsci.uci.edu
-port = 20453
+host = brie.cogsci.uci.edu
+port = 20451
 cutoff_time = 60
 logfile = server.log
 loglevel = 2
