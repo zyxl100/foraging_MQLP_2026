@@ -1,0 +1,2 @@
+sub_num,neg_llh,alpha,gamma_base,gamma_coef,beta,epsilon,n_choices,n_rewards,n_planets,n_evaluations,n_particles,n_samples,fit_seed
+17,102.025479978906,0.29916367187500004,-7.375781249999999,-1.505859375,1.0,0.1,254,254,63,1067,1024,200,29

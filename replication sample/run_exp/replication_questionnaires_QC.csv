@@ -1,0 +1,11 @@
+﻿source_file,status,detail,subject_id,QUIC_n,LEC_n,PCL_n,warnings
+S_5ba641d1168e5e0001e4275d.csv,parsed,,5ba641d1168e5e0001e4275d,38,17,20,
+S_5e92604b3d1b57595c446071.csv,parsed,,5e92604b3d1b57595c446071,38,17,20,
+S_65bd6e6d58e4443614dae27b.csv,parsed,,65bd6e6d58e4443614dae27b,37,17,20,Unexpected QUIC Q27: 'Prefer not to answer'
+S_65dc99d0191a135ab835bf69.csv,parsed,,65dc99d0191a135ab835bf69,38,17,20,
+S_673a5295a273de4f70ab6ee3.csv,parsed,,673a5295a273de4f70ab6ee3,38,17,20,
+S_675e4fba8296e430d8df89ea.csv,parsed,,675e4fba8296e430d8df89ea,37,17,20,Unexpected QUIC Q4: 'Prefer not to answer'
+S_67b8d3adc925460632e8e8a1.csv,parsed,,67b8d3adc925460632e8e8a1,38,17,20,
+S_6a05d3f81ad21393e6af41ca.csv,parsed,,6a05d3f81ad21393e6af41ca,37,17,20,Unexpected QUIC Q27: 'Prefer not to answer'
+S_6a06fb2de222a02d8479371c.csv,parsed,,6a06fb2de222a02d8479371c,38,17,20,
+S_6a2585dd32799c2dda08c658.csv,parsed,,6a2585dd32799c2dda08c658,38,17,20,
