@@ -1,0 +1,47 @@
+factor,factor_name,question,reverse_for_this_factor
+1,General Unpredictability,Q2,False
+1,General Unpredictability,Q11,False
+1,General Unpredictability,Q12,False
+1,General Unpredictability,Q13,False
+1,General Unpredictability,Q16,False
+1,General Unpredictability,Q18,False
+1,General Unpredictability,Q19,False
+1,General Unpredictability,Q20,False
+1,General Unpredictability,Q21,False
+1,General Unpredictability,Q22,False
+1,General Unpredictability,Q23,False
+1,General Unpredictability,Q24,False
+1,General Unpredictability,Q25,False
+1,General Unpredictability,Q26,False
+1,General Unpredictability,Q27,False
+1,General Unpredictability,Q28,True
+1,General Unpredictability,Q30,False
+1,General Unpredictability,Q37,False
+1,General Unpredictability,Q38,False
+2,Structure,Q1,False
+2,Structure,Q3,False
+2,Structure,Q4,False
+2,Structure,Q5,False
+2,Structure,Q6,False
+2,Structure,Q7,False
+2,Structure,Q8,False
+2,Structure,Q9,False
+2,Structure,Q10,False
+2,Structure,Q14,False
+2,Structure,Q15,False
+2,Structure,Q28,False
+3,Factor 3,Q11,False
+3,Factor 3,Q31,False
+3,Factor 3,Q32,False
+3,Factor 3,Q33,False
+3,Factor 3,Q34,False
+3,Factor 3,Q35,False
+4,Factor 4,Q20,False
+4,Factor 4,Q26,False
+4,Factor 4,Q27,False
+4,Factor 4,Q29,False
+5,Factor 5,Q10,False
+5,Factor 5,Q17,False
+6,Factor 6,Q36,False
+6,Factor 6,Q37,False
+6,Factor 6,Q38,False
